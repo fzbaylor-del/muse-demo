@@ -23,7 +23,7 @@ export default function Checkout() {
         body: JSON.stringify({
           email,
           amount: amountKobo,
-          callback_url: `${window.location.origin}/?payment=success`, // Redirect URL after payment
+          callback_url: `https://muse-demo.vercel.app/?payment=success`, // Redirect URL after payment
         }),
       })
 
