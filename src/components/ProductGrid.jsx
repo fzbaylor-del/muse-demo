@@ -40,7 +40,7 @@ export default function ProductGrid({ onCartOpen }) {
               alt={product.name}
               className="w-full h-[450px] object-cover transform group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-between p-6">
+            <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-between p-6">
               <div>
                 <h3 className="text-sm font-light tracking-[0.2em]">{product.name}</h3>
                 <p className="text-sm text-white/50 mt-1 font-light">₦{product.price.toLocaleString()}</p>

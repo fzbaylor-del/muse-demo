@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black z-10" />
 
       <div className="relative z-20 text-center px-6">
-        <motion.h1 className="text-7xl md:text-9xl font-extralight tracking-[0.3em] text-white flex justify-center flex-wrap mb-8">
+        <motion.h1 className="text-5xl sm:text-7xl md:text-9xl font-extralight tracking-[0.3em] text-white flex justify-center mb-8 whitespace-nowrap overflow-hidden">
           {title.map((letter, i) => (
             <motion.span key={i} custom={i} variants={letterVariants} initial="hidden" animate="visible" className="inline-block">
               {letter === ' ' ? '\u00A0' : letter}

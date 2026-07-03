@@ -16,14 +16,9 @@ export default function Navbar({ onCartOpen }) {
           MUSE
         </a>
         <div className="hidden md:flex items-center gap-12 text-xs font-light tracking-[0.2em] text-white/60">
-          {/* Links are placeholders for now */}
-          <a href="#" className="hover:text-white transition-colors">NEW</a>
           <a href="#shop" className="hover:text-white transition-colors">SHOP</a>
-          <a href="#" className="hover:text-white transition-colors">LOOKBOOK</a>
-          {/* Cart button */}
           <button onClick={onCartOpen} className="relative text-white/60 hover:text-white transition-colors">
             <span className="text-xl">🛍️</span>
-            {/* Hardcoded count for demo — you can connect to real cart count later */}
             <span className="absolute -top-2 -right-2 bg-rose-500 text-white text-[10px] rounded-full h-5 w-5 flex items-center justify-center font-sans">2</span>
           </button>
         </div>
@@ -40,9 +35,7 @@ export default function Navbar({ onCartOpen }) {
             className="md:hidden bg-black/90 backdrop-blur-xl border-t border-white/5"
           >
             <div className="flex flex-col gap-6 px-6 py-8 text-white text-sm font-light tracking-widest">
-              <a href="#" onClick={() => setMenuOpen(false)}>NEW</a>
               <a href="#shop" onClick={() => setMenuOpen(false)}>SHOP</a>
-              <a href="#" onClick={() => setMenuOpen(false)}>LOOKBOOK</a>
               <button onClick={() => { onCartOpen(); setMenuOpen(false); }}>🛍️ CART</button>
             </div>
           </motion.div>
