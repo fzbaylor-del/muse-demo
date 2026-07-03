@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 
-const title = 'SUMMER 2026'.split('')
+const mainTitle = 'SUMMER'.split('')
+const subTitle = '2026'.split('')
 
 const letterVariants = {
   hidden: { opacity: 0, y: 60, rotateX: -90 },
@@ -27,13 +28,24 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black z-10" />
 
       <div className="relative z-20 text-center px-6">
-        <motion.h1 className="text-5xl sm:text-7xl md:text-9xl font-extralight tracking-[0.3em] text-white flex justify-center mb-8 whitespace-nowrap overflow-hidden">
-          {title.map((letter, i) => (
+        {/* Line 1: SUMMER – larger font */}
+        <motion.h1 className="text-6xl sm:text-8xl md:text-9xl font-extralight tracking-[0.3em] text-white flex justify-center mb-2 whitespace-nowrap overflow-hidden">
+          {mainTitle.map((letter, i) => (
             <motion.span key={i} custom={i} variants={letterVariants} initial="hidden" animate="visible" className="inline-block">
-              {letter === ' ' ? '\u00A0' : letter}
+              {letter}
             </motion.span>
           ))}
         </motion.h1>
+
+        {/* Line 2: 2026 – smaller font */}
+        <motion.h2 className="text-4xl sm:text-5xl md:text-7xl font-extralight tracking-[0.5em] text-white flex justify-center mb-8 whitespace-nowrap overflow-hidden">
+          {subTitle.map((letter, i) => (
+            <motion.span key={i} custom={i + mainTitle.length} variants={letterVariants} initial="hidden" animate="visible" className="inline-block">
+              {letter}
+            </motion.span>
+          ))}
+        </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
